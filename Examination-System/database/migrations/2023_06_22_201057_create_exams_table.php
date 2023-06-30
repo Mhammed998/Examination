@@ -16,6 +16,8 @@ return new class extends Migration
             $table->string('exam_name');
             $table->text('exam_desc')->nullable();
             $table->string('exam_code');
+            $table->unsignedBigInteger('course_id');
+            $table->foreign('course_id')->references('id')->on('courses');
             $table->boolean('status')->default(true);
             $table->timestamps();
         });

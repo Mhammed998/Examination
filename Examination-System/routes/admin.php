@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,13 +15,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/dashboard', function () {
-    return view('backend.index');
-});
 
 
-Route::group(['namespace'=>'backend' , 'prefix' => 'dashboard'], function(){
-Route::resource('/departments' , 'DepartmentController');
+
+Route::group(['namespace'=>'backend' ,
+    'prefix' => LaravelLocalization::setLocale(),
+    'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]], function(){
+
+Route::get('/dashboard' , 'DashboardController@index')->name('dashboard.index');
+Route::get('/dashboard/users/index' , 'UserController@index')->name('users.index');
+Route::get('/dashboard/users/create' , 'UserController@create')->name('users.create');
+Route::resource('/dashboard/departments' , 'DepartmentController');
+Route::resource('/dashboard/exams' , 'ExamController');
+Route::get('/dashboard/exams/{examId}/create-exam-questions' , 'questionController@createExamQuestions');
+Route::resource('/dashboard/questions' , 'questionController');
+Route::resource('/roles', 'RoleController');
 });
 
 

@@ -14,7 +14,11 @@ return new class extends Migration
         Schema::create('answers', function (Blueprint $table) {
             $table->id();
             $table->string('answer');
-            $table->string('right_answer');
+            $table->boolean('isRight')->default(false);
+            $table->text('answer_explanation')->nullable();
+            $table->string('more_info_link')->nullable();
+            $table->unsignedBigInteger('question_id');
+            $table->foreign('question_id')->references('id')->on('questions');
             $table->boolean('status')->default(true);
             $table->timestamps();
         });
