@@ -25,11 +25,10 @@ Route::group(['namespace'=>'backend' ,
 Route::get('/dashboard' , 'DashboardController@index')->name('dashboard.index');
 Route::get('/dashboard/users/index' , 'UserController@index')->name('users.index');
 Route::get('/dashboard/users/create' , 'UserController@create')->name('users.create');
-Route::resource('/dashboard/departments' , 'DepartmentController');
-Route::resource('/dashboard/exams' , 'ExamController');
-Route::get('/dashboard/exams/{examId}/create-exam-questions' , 'questionController@createExamQuestions');
-Route::resource('/dashboard/questions' , 'questionController');
-Route::resource('/roles', 'RoleController');
+
+Route::resource('dashboard/educational-stages' , 'StageController');
+Route::resource('dashboard/questions' , 'questionController');
+Route::resource('dashboard/roles', 'RoleController');
 });
 
 

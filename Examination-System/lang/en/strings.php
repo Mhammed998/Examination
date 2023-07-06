@@ -8,9 +8,9 @@ return [
     'MEMBERS-MANAGEMENT' => 'Members Management',
     'CREATE-MEMBER' => 'Add New Member',
 
-    'DEPARTMENTS' => 'Departments',
-    'DEPARTMENTS-MANAGEMENT' => 'Departments Management',
-    'CREATE-DEPARTMENT' => 'Add New Department',
+    'STAGES' => 'Educational Stages',
+    'STAGES-MANAGEMENT' => 'Educational Stages Management',
+    'CREATE-STAGE' => 'Add New Educational Stages',
 
     'COURSES' => 'Courses',
     'COURSES-MANAGEMENT' => 'Courses Management',

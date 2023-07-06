@@ -33,13 +33,13 @@
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#departments">
                             <div class="pull-left"><i class="ti-folder"></i><span
-                                    class="right-nav-text">{{__('strings.DEPARTMENTS')}}</span></div>
+                                    class="right-nav-text">{{__('strings.STAGES')}}</span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
                         </a>
                         <ul id="departments" class="collapse" data-parent="#sidebarnav">
-                            <li> <a href="">{{__('strings.DEPARTMENTS-MANAGEMENT')}} </a> </li>
-                            <li> <a href="">{{__('strings.CREATE-DEPARTMENT')}}</a> </li>
+                            <li> <a href="{{route('educational-stages.index')}}">{{__('strings.STAGES-MANAGEMENT')}} </a> </li>
+                            <li> <a href="{{route('educational-stages.create')}}">{{__('strings.CREATE-STAGE')}}</a> </li>
                         </ul>
                     </li>
 

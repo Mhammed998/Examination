@@ -8,9 +8,9 @@ return [
     'MEMBERS-MANAGEMENT' =>'إدارة الأعضاء',
     'CREATE-MEMBER' => 'إضافة عضو جديد  ',
 
-    'DEPARTMENTS' => 'الأقسام',
-    'DEPARTMENTS-MANAGEMENT' => ' إداره الاقسام',
-    'CREATE-DEPARTMENT' => 'إضافة قسم جديد  ',
+    'STAGES' => ' المراحل التعليمية',
+    'STAGES-MANAGEMENT' => 'إدارة المراحل التعليمية  ',
+    'CREATE-STAGE' => 'إضافة مرحلة تعليمية',
 
     'COURSES' => 'الدورات التعليمية',
     'COURSES-MANAGEMENT' => 'إدارة الدورات التعليمية ',
