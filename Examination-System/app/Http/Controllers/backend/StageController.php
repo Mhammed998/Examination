@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Stages\StageRequest;
+use App\Models\EducationalStage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -14,7 +16,7 @@ class StageController extends Controller
     public function index()
     {
 
-        $stages = DB::table('educational_stages')->get();
+        $stages = EducationalStage::select('id', 'name_'.app()->getLocale() . '  as name' )->get();
 
         return view('backend.stages.index', ['stages'=>$stages]);
 
@@ -28,36 +30,46 @@ class StageController extends Controller
         return view('backend.stages.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+
+    public function store(StageRequest $request)
     {
-        //
+        $newStage = new EducationalStage;
+        $newStage->name_en = $request->name_en;
+        $newStage->name_ar = $request->name_ar;
+        $newStage->notes = $request->notes;
+        $newStage->save();
+
+        toastr()->success('Data has been saved successfully!');
+        return redirect()->route('educational-stages.index');
     }
 
-    /**
-     * Display the specified resource.
-     */
+
     public function show(string $id)
     {
-        //
+        $stage = EducationalStage::findOrFail($id);
+        return view('backend.stages.show' , ['stage'=> $stage]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
+
+
+    public function edit($id)
     {
-        //
+        $stage = EducationalStage::findOrFail($id);
+        return view('backend.stages.edit' , ['stage'=> $stage]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+
+
+    public function update(StageRequest $request , $id)
     {
-        //
+        $stage = EducationalStage::findOrFail($id);
+
+        $stage->update($request->all());
+
+        toastr()->success('Data has been updated successfully!');
+        return redirect()->back();
+
+
     }
 
     /**
@@ -65,6 +77,8 @@ class StageController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $stage = EducationalStage::findOrFail($id);
+        $stage->delete();
+        return redirect()->route('educational-stages.index');
     }
 }

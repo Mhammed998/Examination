@@ -3,6 +3,14 @@
 // lang/en/strings.php
 
 return [
+    'DELETE' => 'Delete',
+    'CONFIRM' => 'Confirm',
+    'CLOSE' => 'Close',
+    'SHOW' => 'Show All',
+    'UNITES' => 'Unites',
+    'SEARCH' => 'Search',
+    'NAME' => 'Name',
+
     'DASHBOARD' => 'Dashboard',
     'MEMBERS' => 'Members',
     'MEMBERS-MANAGEMENT' => 'Members Management',
@@ -10,7 +18,10 @@ return [
 
     'STAGES' => 'Educational Stages',
     'STAGES-MANAGEMENT' => 'Educational Stages Management',
-    'CREATE-STAGE' => 'Add New Educational Stages',
+    'CREATE-STAGE' => 'Add New Educational Stage',
+    'STAGE' => 'Educational Stage',
+    'EDIT-STAGE' => 'Edit Educational Stage',
+
 
     'COURSES' => 'Courses',
     'COURSES-MANAGEMENT' => 'Courses Management',
@@ -32,5 +43,14 @@ return [
     'ROLES-PERMISSIONS' => 'Roles & Permissions',
     'ROLES-MANAGEMENT' => 'Roles Management',
     'CREATE-ROLE' => 'Add New Role',
+
+
+    'NAME_IN_ENGLISH' => 'Name in English',
+    'NAME_IN_ARABIC' => 'Name in Arabic',
+    'NOTES' => 'Notes',
+    'CONTROLS' => 'Controls',
+    'SAVE' => 'Save'
+
+
 
 ];

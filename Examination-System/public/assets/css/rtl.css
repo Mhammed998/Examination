@@ -38,6 +38,9 @@ NOTE: This file includes all admin Template plugins and Shortcodes. If you don't
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap');
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -75,7 +78,7 @@ NOTE: This file includes all admin Template plugins and Shortcodes. If you don't
   box-sizing: border-box; }
 
 html {
-  font-family: sans-serif;
+    font-family: 'Cairo', sans-serif !important;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -84,7 +87,8 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 @-ms-viewport {
-  width: device-width; }
+  width: device-width;
+}
 
 article,
 aside,
@@ -101,8 +105,8 @@ section {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 1rem;
+    font-family: 'Cairo', sans-serif !important;
+    font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
@@ -8254,7 +8258,7 @@ a.fc-more:hover {
   height: 1em;
   line-height: 1em;
   font-size: 1em;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Cairo', sans-serif;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -8579,7 +8583,7 @@ a.fc-more:hover {
   overflow: hidden;
   line-height: 8px;
   font-size: 11px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Cairo', sans-serif;
   text-align: center;
   cursor: s-resize; }
 
@@ -19771,7 +19775,7 @@ html {
   font-size: 14px; }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Cairo', sans-serif;
   margin: 0;
   padding: 0;
   font-size: 0.95rem;
@@ -19784,7 +19788,7 @@ h1, h2, h3, h4, h5, h6, p, span, ul, li, a, ol {
 h1, h2, h3, h4, h5, h6 {
   color: #323232;
   font-weight: 500;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Cairo', sans-serif;
   margin-bottom: 0.5rem; }
 
 h1 {
@@ -21971,7 +21975,7 @@ footer a {
   border: solid 2px #eeeeee;
   font-size: 12px;
   text-align: center;
-  font-family: 'Poppins', sans-serif !important; }
+  font-family: 'Cairo', sans-serif !important; }
   .morris-hover.morris-default-style .morris-hover-row-label {
     font-weight: bold;
     margin: 0.25em 0; }
@@ -22620,7 +22624,7 @@ select.form-control-sm:not([size]):not([multiple]) {
   line-height: 43px; }
 
 .custom-file-label:after {
-  font-family: 'Poppins', sans-serif; }
+  font-family: 'Cairo', sans-serif; }
 
 /*hide-axis*/
 .hide-axis text[text-anchor="middle"] {
